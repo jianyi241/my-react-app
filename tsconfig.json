@@ -27,6 +27,7 @@
     "exclude":["node_modules"], // 列出不编译的文件有哪些
   },
   "include": [
-    "src"
+    "src",
+    "config/setupProxy.js"
   ]
 }

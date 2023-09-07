@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import Navbar from "./components/Navbar/Navbar";
+import routes from "./router";
 
+// 引入包管理工具
+import { renderRoutes, RouteConfig } from "react-router-config";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+        <Navbar />
+        <div className={'container'}>
+            {/* 设置routes的类型为RouteConfig[]，否则报错 */}
+            {renderRoutes(routes as RouteConfig[])}
+        </div>
     </div>
   );
 }
