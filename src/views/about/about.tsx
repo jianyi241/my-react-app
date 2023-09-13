@@ -1,14 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
+import {useHistory} from "react-router-dom";
+import {Button} from "antd";
 
-export default class About extends Component {
-    render() {
+ function About(){
+
+
+    const history = useHistory()
+
+    const to = (path: string):void => {
+        history.push(path)
+    }
+
         return (
             <div className="about">
                 <div className="container">
                     <h3 className="center"> About页面</h3>
-                    <p>欢迎来到关于我们页面！</p>
+                    <Button onClick={() => to('/')}>go to Home</Button>
                 </div>
             </div>
         );
-    }
 }
+
+export default About

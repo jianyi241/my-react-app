@@ -4,7 +4,7 @@ import { AxiosRequest, CustomResponse } from './interface'
 class Request {
 
     // baseURL
-    protected baseURL: string = process.env.REACT_APP_BASE_API!.toString()
+    protected baseURL: string = process.env.REACT_APP_BASE_API as string
 
     // 自定义表头
     protected headers: object = {

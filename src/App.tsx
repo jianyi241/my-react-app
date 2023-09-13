@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import routes from "./router";
 
 // 引入包管理工具
-import { renderRoutes, RouteConfig } from "react-router-config";
+    import { renderRoutes, RouteConfig } from "react-router-config";
 function App() {
   return (
     <div className="app">
