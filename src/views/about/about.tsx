@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useHistory} from "react-router-dom";
 import {Button} from "antd";
 
- function About(){
+ function About(props){
 
 
     const history = useHistory()
+
+     useEffect(() => {
+         console.log('props ', props.location.state)
+     },[])
 
     const to = (path: string):void => {
         history.push(path)

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './index.scss'
 import {Button} from "antd";
 import {useHistory} from "react-router-dom";
-import router from "../../router";
 
  function Navbar() {
 

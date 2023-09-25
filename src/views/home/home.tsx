@@ -64,11 +64,17 @@ const Home: React.FC = () => {
                         loading: false
                     }))
                 }
+            }).catch(err => {
+                setPage(prev => ({
+                    ...prev,
+                    loading: false
+                }))
+                console.log('err ', err)
             })
         }, 200)
     }
 
-    const changePage = (current: number): void => {
+    const onChangePage = (current: number): void => {
         console.log('page ', current)
         page.pageNum = current
         setPage({...page})
@@ -129,7 +135,8 @@ const Home: React.FC = () => {
                            defaultPageSize: page.pageSize,
                            current: page.pageNum,
                            total: page.total,
-                           onChange: changePage
+                           onChange: onChangePage,
+                           size: 'default'
                        }}
                        loading={page.loading}
                 />
